@@ -1,5 +1,15 @@
-<h3><%= @message.title %></h3>
+<h2><%= @message.title %></h3>
 <p><%= @message.description %></p>
+
+<hr>
+
+<h4>Comments: </h4>
+<%= render @message.comments %>
+
+<hr>
+
+<h4>Reply to Message: </h4>
+<%= render 'comments/form' %>
 
 <%= link_to "Back", root_path, class: "btn btn-primary" %>
 <%= link_to "Edit", edit_message_path(@message), class: "btn btn-primary" %>
